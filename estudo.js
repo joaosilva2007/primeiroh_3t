@@ -2,7 +2,7 @@
 //console.log('Oi, eu estou no console');
 //document.write('aula de PC');
 
-let tabuada = 20;
+var tabuada = 20;
 let nome = joao
 function meChame(nome){
   document.write( "<h1>Tabuada do " + tabuada + "<h1> ")
@@ -17,4 +17,15 @@ function meChame(nome){
   document.write(tabuada + " x 9 = "+ (tabuada*9)+"<br>");
   document.write(tabuada + " x 10 = "+ (tabuada*10)+"<br><br>");
   document.write(" Feita por " + nome)
+}
+
+function escreva(){
+  for(var i = 0; i < 11; i++ ){
+    document.write(tabuada + " x" + i + " = "+ (tabuada*i)+"<br>");
+
+  }
+ function quadrado(){
+   for(var i = 2; i < 21; i++)
+   document.write("O quadrado de" + i + "é" + (i*i)+ "<br>") 
+  }
 }
