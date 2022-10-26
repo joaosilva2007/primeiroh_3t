@@ -1,100 +1,36 @@
-//alert('Oi, eu sou o alert!')
-//console.log('Oi, eu estou no console');
-//document.write('aula de PC');
+.calculadora{
+    padding: 10px;
+    background: rgba(129, 235, 152, 0.534);
+    width: 200px;
+    border-radius: 20px;
+}
+.listaMensal{
+    padding: 10px;
+    background: rgba(3, 236, 53, 0.534);
+    width: 200px;
+    border-radius: 20px;
+}
+.calculadora input {
+    background: rgb(1, 7, 26);
+    color: white;
+    border-radius: 7px;
+}
+.spResul {
+    background: rgba(21, 21, 153, 0.24);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
 
-var tabuada = 8;
+}
 
-function meChame(nome){
-    document.write("<h1>Tabuada do " + tabuada + "</h1>");
-    document.write(tabuada + " x 1 = "+(tabuada*1)+"<br>");
-    document.write(tabuada + " x 2 = "+(tabuada*2)+"<br>");
-    document.write(tabuada + " x 3 = "+(tabuada*3)+"<br>");
-    document.write(tabuada + " x 4 = "+(tabuada*4)+"<br>");
-    document.write(tabuada + " x 5 = "+(tabuada*5)+"<br>");
-    document.write(tabuada + " x 6 = "+(tabuada*6)+"<br>");
-    document.write(tabuada + " x 7 = "+(tabuada*7)+"<br>");
-    document.write(tabuada + " x 8 = "+(tabuada*8)+"<br>");
-    document.write(tabuada + " x 9 = "+(tabuada*9)+"<br>");
-    document.write(tabuada + " x 10 = "+(tabuada*10)+"<br");
-    document.write("Feita por " + nome);
+#btnCalc{
+ width: 50px;
+ padding: 5px;
+ background-color: rgb(131, 245, 156);
+ margin-top: 15px;   
+}
+#btnCalc:hover{
+    background-color: rgb(22, 247, 34);
     
-}
-
-function escreva(){
-    for(var i = 1; i < 11; i++){
-        document.write(tabuada + " x " + i + " = "+(tabuada*i)+"<br>");
-    }
-}
-
-function quadrado(){
-    for(var i = 2; i < 101; i++){
-        document.write("O Quadrado de " + i + " é " + (i*i)+ "<br>")
-    }
-}
-function moedabr(atual){
-   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-
-}
-
-
-
-
-function total(){
-    let valor = document.getElementById("val").value;
-    let juros = document.getElementById("ju").value;
-    let mes = document.getElementById("mes").value;
-    let resultado = 0;
-   
-    if (!Number(valor)) {
-        alert("O valor deve ser um número.");
-        document.getElementById("val").value = "";
-        document.getElementById("val").focus();
-        return
-    }
-    if (!Number(juros)) {
-        alert("O valor dos juros deve ser um número.");
-        document.getElementById("ju").value = "";
-        document.getElementById("ju").focus();
-        return
-    }
-    if (!Number(mes)) {
-        alert("A quantide de meses deve ser um número.");
-        document.getElementById("mes").value = "";
-        document.getElementById("mes").focus();
-        return
-    }
-
-   
-    for(let i = 1; i <= mes; i++){
-        let texto = "";
-        resultado = valor * (1+(juros/100));
-        valor = resultado;
-        texto += Mês  + i + " valor: " + moedabr(resultado) + "<br>"
-        //document.write("Mês " + i + " valor: " + moedabr(resultado) + "<br>");
-         
-    }
-    document.getElementById("meses").innerHTML = texto;
-    document.getElementById("resultado").innerHTML = "Total: " + moedabr(resultado)  
-//document.write("O Resultado é " + moedabr(resultado));
-}
-function soma(){
-    let n1 = document.getElementById("n1").value;
-    let n2 = document.getElementById("n2").value;
-    let n3 = document.getElementById("n3").value;
-    let r = Number(n1) + Number(n2) + Number(n3);
-    document.getElementById("resultado").innerHTML = r;
-}
-function média(){
-    let n1 = document.getElementById("n1").value;
-    let n2 = document.getElementById("n2").value;
-    let n3 = document.getElementById("n3").value;
-    let r = (Number(n1) + Number(n2) + Number(n3))/3;
-    document.getElementById("resultado").innerHTML = r;
-}
-function precisa(){
-    let n1 = document.getElementById("n1").value;
-    let n2 = document.getElementById("n2").value;
-    let n3 = document.getElementById("n3").value;
-    let r = 180 - (Number(n1) + Number(n2) + Number(n3));
-    document.getElementById("resultado").innerHTML = r;
 }
